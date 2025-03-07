@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">Tejaswini Ganji</div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#aboutme">About me</a></li>
+                    <li><a href="#CGPA">CGPA</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="maincontent">
+            <div class="main-left">
+                <p class="para">Hello! I'm</p>
+                <p class="para-name"><em>Tejaswini Ganji</em></p>
+                <p class="para">and I am a</p>
+                <span id="element"></span>
+            </div>
+            <div class="main-right">
+                <img src="/assets/portfolio.jpg" width="450px" style="border-radius:50%">
+            </div>
+        </div>
+        <section id="aboutme">
+            <div class="aboutmecontent">
+                <p class="h2">About Me</p>
+                <p class="aboutmepara">
+                    To obtain a position that allows me to utilize my skills and experience to contribute to an organization’s
+                    success while continuing to learn and develop professionally. I have exceptional teamwork and
+                    communication skills. My strengths include adaptability, a strong work ethic, and a passion for continuous
+                    learning and growth.I am a skilled problem solver in coding and have completed several interesting
+                    projects across different domains.
+                </p>
+            </div>
+        </section>
+    
+        <section id="CGPA">
+            <p class="h2">CGPA</p>
+                <div class="semesters">
+                    <div class="semister">Semester 1: <span>9.05</span></div>
+                    <div class="semister">Semester 2: <span>9.33</span></div>
+                    <div class="semister">Semester 3: <span>8.62</span></div>
+                    <div class="semister">Semester 4: <span>8.45</span></div>
+                    <div class="semister">Semester 5: <span>N/A</span></div>
+                    <div class="semister">Semester 6: <span>N/A</span></div>
+                    <div class="semister">Semester 7: <span>N/A</span></div>
+                    <div class="semister">Semester 8: <span>N/A</span></div>
+                </div>
+        </section>
+        <section id="resume">
+            <p class="h2">Resume</p>
+             <div class="resumecontent">
+                 <a href="/assets/Resume.pdf" target="_blank" class="btn">View Resume</a>
+                 <a class="btn btn-download" onclick="downloadFile()">Download</a>
+                 <script>
+                    function downloadFile() {
+                        const fileUrl = 'Resume.pdf'; 
+                        const link = document.createElement('a');
+                        link.href = fileUrl;
+                        link.download = 'Resume.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+                </script>
+             </div>
+        </section>
+
+        <section id="skills">
+                <p class="h2">Skills</p>
+                <div class="skills-list">
+                    <div class="skill">C</div>
+                    <div class="skill">C++</div>
+                    <div class="skill">Java</div>
+                    <div class="skill">MySQL</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">ReactJS</div>
+                    <div class="skill">MongoDB</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">ExpressJS</div>
+                    <div class="skill">NodeJS</div>
+                </div>
+        </section>
+
+        <section id="projects">
+            <div class="projectssection container py-5">
+                <p class="h2 text-center mb-4">Projects</p>
+                <div class="row g-4">
+                    <!-- CertiCraft Project Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded">
+                            <div class="card-body">
+                                <h3 class="card-title">CertiCraft (Individual)</h3>
+                                <p class="card-text">
+                                    Built a Python application to automate the creation of personalized certificates 
+                                    by extracting recipient details from Excel spreadsheets and integrating the data 
+                                    into a predefined certificate template.
+                                </p>
+                                <p class="card-text">
+                                    Streamlined file handling by saving the generated certificates in both PNG and PDF 
+                                    formats using <strong>Pillow</strong>, <strong>img2pdf</strong>, and <strong>openpyxl</strong>.
+                                </p>
+                                <a href="https://github.com/tejaswini-ganji/certicraft.git" class="btn" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- AI Katha Vaachak Project Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded">
+                            <div class="card-body">
+                                <h3 class="card-title">AI Katha Vaachak (Team)</h3>
+                                <p class="card-text">
+                                    Developed an AI-powered storytelling application that generates customized stories 
+                                    based on user input.
+                                </p>
+                                <p class="card-text">
+                                    Fine-tuned <strong>LLaMA-3</strong> for story generation and integrated <strong>React</strong> 
+                                    for an interactive user experience.
+                                </p>
+                                <p class="card-text">
+                                    Ensured character consistency across scenes and enabled image generation using 
+                                    <strong>Stable Diffusion</strong>.
+                                </p>
+                                <a href="https://github.com/tejaswini-ganji/KATHA-VAACHAK.git" class="btn" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Recipe Realm Project Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded">
+                            <div class="card-body">
+                                <h3 class="card-title">Recipe Realm (Team)</h3>
+                                <p class="card-text">
+                                    A system that suggests recipes based on user-input ingredients.
+                                </p>
+                                <p class="card-text">
+                                    Built with <strong>MERN Stack</strong>, web scraping for dataset collection, and 
+                                    integrated with a <strong>LLM model</strong>.
+                                </p>
+                                <p class="card-text">
+                                    Users can log in, search recipes, add favorites, and provide feedback.
+                                </p>
+                                <a href="https://github.com/tejaswini-ganji/RecipeRealm.git" class="btn" target="_blank">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="certifications">
+            <p class="h2">Certifications</p>
+            <div class="certificatesection">
+                <ul>
+                    <li>Career Essentials in GenAI - Microsoft</li>
+                    <li>Basics of MySQL - HackerRank & Scaler</li>
+                    <li>Certified in JAVA in NPTEL Courses</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contactme">
+            <div class="contactmesection">
+                <p class="h2">Contact Me</p>
+                <div class="contactLinks">
+                    <a href="mailto:tejaswiniganji1702@gmail.com" target="_blank">
+                        <img src="assets/mail-logo.png" class="icon" width="50px">
+                    </a>
+                    
+                    <a href="https://github.com/tejaswini-ganji" target="_blank">
+                        <img src="assets/git-logo2.png" class="icon" width="50px" alt="github">
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/tejaswini-ganji-414a10311/" target="_blank">
+                        <img src="assets/ln-logo.png" class="icon" width="50px">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 Tejaswini Ganji
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Student at KMIT', 'Web Developer', 'Competitive Programmer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+            showCursor: false 
+        });
+    </script>
+</body>
+</html>

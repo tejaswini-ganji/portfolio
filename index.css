@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F1DE;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    /* background-color: #f8f9fa; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color:  #3D405B;
+}
+
+.nav-left {
+    font-size: 2rem;
+    font-weight: bold;
+    color:whitesmoke;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right ul li {
+    display: inline;
+}
+
+.nav-right ul li a {
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-right ul li a:hover {
+    color: rgba(0, 255, 255, 0.582);
+}
+
+/* Main Content */
+.maincontent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 20px;
+}
+
+.main-left {
+    flex: 1;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.main-right {
+    margin-top: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.para {
+    font-size: 50px;
+    color:  #3D405B;
+}
+
+.para-name {
+    color: #3D405B;
+    font-size: 55px;
+    text-shadow: 2px 2px 4px #1E3A8A;   
+}
+
+#element {
+    font-style: italic;
+    color: #3D405B;
+    font-size: 55px;
+}
+
+/* About Me Section */
+
+#aboutme, #certifications, #CGPA, #skills,#contactme,#projects{
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding: 50px 20px; */
+}
+#projects{
+    min-height:40vh;
+}
+#certifications,#contactme{
+    min-height:30vh;
+}
+.aboutmecontent, .certificatesection {
+    max-width: 800px;
+    font-size: 1.5rem;
+}
+
+
+.aboutmepara{
+    padding: 20px 40px;
+    background-color:  rgba(128, 128, 128, 0.11);
+    /* box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3); */
+    box-shadow: 0 4px 10px  #3D405B; 
+    
+    border-radius: 25%;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+/* academics */
+#CGPA,#skills,#resume{
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.semesters,.skills-list,.certificatesection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.semister,.skill{
+    background-color: rgba(128, 128, 128, 0.11);
+    padding: 15px 5px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    width:25%;
+    /* box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3); */
+    box-shadow: 0 4px 10px  #3D405B; 
+}
+.skill{
+    background-color: rgba(128, 128, 128, 0.11);
+    padding: 15px 5px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    width:20%;
+    /* box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3); */
+    box-shadow: 0 10px 15px  #3D405B; 
+}
+
+/* project CSS */
+.btn{
+    border-radius: 25%;
+    padding: 10px 10px;
+    box-shadow: 0 5px 5px  #3D405B; 
+    transition: all 0.3s ease-in-out;
+    background-color:  rgba(128, 128, 128, 0.11);
+}
+.card {
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card-body {
+    border-radius: 15px; /* Ensures inner content respects the border-radius */
+}
+
+/* certifications CSS */
+#certifications{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.certificatesection ul li{
+    list-style: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-radius: 25%;
+    background-color: rgba(128, 128, 128, 0.11);
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3); */
+    box-shadow: 0 10px 15px  #3D405B; 
+}
+/* hover effects */
+.certificatesection ul li:hover,
+.skill:hover,
+.semister:hover{
+    background-color: rgba(128, 128, 128, 0.25);
+    transform: scale(1.05);
+    /* box-shadow: 0 6px 15px  rgba(0, 188, 212, 0.3);  */
+    box-shadow: 0 10px 15px  #3D405B; 
+}
+.aboutmepara:hover,.btn:hover{
+    background-color: rgba(128, 128, 128, 0.25);
+    transform: scale(1);
+    /* box-shadow: 0 6px 15px  rgba(0, 188, 212, 0.3);  */
+    box-shadow: 0 10px 15px  #3D405B; 
+}
+/* conct links CSS */
+.contactlinks
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contactLinks a {
+    display: inline-block; 
+    gap: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactLinks a:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+/* h1 css */
+#CGPA .h2,#aboutme .h2,#skills .h2,#certifications .h2,#contactme .h2,#projects .h2,#resume .h2{
+     margin-bottom: 20px;
+    color: #3D405B; 
+    text-shadow: 1px 1px 2px #1E3A8A;  
+}
+
+html {
+    scroll-padding-top: 80px; /* Adjust according to your navbar height */
+    scroll-behavior: smooth; /* Optional: Adds smooth scrolling */
+}
+
+
