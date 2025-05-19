@@ -12,7 +12,12 @@
         <nav>
             <div class="nav-left">Tejaswini Ganji</div>
             <div class="nav-right">
-                <ul>
+                <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="">Home</a></li>
                     <li><a href="#aboutme">About me</a></li>
                     <li><a href="#CGPA">CGPA</a></li>
@@ -34,7 +39,9 @@
                 <span id="element"></span>
             </div>
             <div class="main-right">
-                <img src="assets/portfolio.jpg" width="450px" style="border-radius:50%">
+                
+                  <img src="assets/portfolio.jpg" class="profile-pic">
+                
             </div>
         </div>
         <section id="aboutme">
@@ -102,7 +109,7 @@
 
         <section id="projects">
             <div class="projectssection container py-5">
-                <p class="h2 text-center mb-4">Projects</p>
+                <p class="h2 text-center mb-5">Projects</p>
                 <div class="row g-4">
                     <!-- CertiCraft Project Card -->
                     <div class="col-md-4">
@@ -189,7 +196,7 @@
                     </a>
                     
                     <a href="https://github.com/tejaswini-ganji" target="_blank">
-                        <img src="assets/git-logo2.png" class="icon" width="50px" alt="github">
+                        <img src="assets/git-logo-new.png" class="icon" width="50px" alt="github">
                     </a>
                     
                     <a href="https://www.linkedin.com/in/tejaswini-ganji-414a10311/" target="_blank">
@@ -215,5 +222,51 @@
             showCursor: false 
         });
     </script>
+    <script>
+        window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+        
+        // Reveal animations for sections
+        const reveals = document.querySelectorAll('.reveal');
+        
+        for (let i = 0; i < reveals.length; i++) {
+            const windowHeight = window.innerHeight;
+            const revealTop = reveals[i].getBoundingClientRect().top;
+            const revealPoint = 150;
+            
+            if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+            }
+        }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.add('reveal');
+        });
+        });
+    </script>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        });
+
+        // When any nav link is clicked, close the menu
+        navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');  // Hide menu
+            toggle.checked = false;               // Uncheck hamburger checkbox if used
+        });
+        });
+
+    </script>
+
+
 </body>
 </html>
